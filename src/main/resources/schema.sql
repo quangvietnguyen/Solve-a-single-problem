@@ -1,0 +1,1 @@
+CREATE TABLE Users (user_name VARCHAR(30), password VARCHAR(30), full_name VARCHAR(60), age DEC(4), email VARCHAR(60));

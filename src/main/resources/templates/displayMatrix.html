@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+	<section id="wrapper">
+		<h1>OUTPUT</h1>
+		<h3>Square Matrix:</h3>
+		<div th:text="${matrixs}"></div>
+		<object width="1000" height="200" data="output.txt"></object>
+		<h3>Position of string in the Square Matrix:</h3>
+		<div th:text="${result}"></div>
+		<h3><a th:href="@{/add}">Play again</a></h3>
+	</section>
+</body>
+</html>

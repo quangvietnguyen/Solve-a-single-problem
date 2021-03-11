@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+	<section id="wrapper">
+		<h1>Register</h1>
+		<form action="#" th:action="@{/}" th:object="${user}" method="get">
+				<table>
+					<tr>
+						<td><label>Username:</label></td>
+						<td><input type="text" th:field="*{username}"/></td>
+					</tr>
+					<tr>
+						<td><label>Password:</label></td>
+						<td><input type="password" th:field="*{password}"/></td>
+					</tr>
+					<tr>
+						<td><label>Full name:</label></td>
+						<td><input type="text" th:field="*{fullname}"/></td>
+					</tr>
+					<tr>
+						<td><label>Age:</label></td>
+						<td><input type="number" th:field="*{age}"/></td>
+					</tr>
+					<tr>
+						<td><label>Email:</label></td>
+						<td><input type="text" th:field="*{email}"/></td>
+					</tr>
+					<tr>
+						<td></td><td><input type="submit" value="Submit"/></td>
+					</tr>
+					<tr>
+						<td></td><td><h4><a th:href="@{/add}">Enter to the Game</a></h4></td>
+					</tr>
+				</table>
+		</form>
+		<img alt="Thor" src="/Thor1.jpg" style="width:95%"/>
+	</section>
+</body>
+</html>

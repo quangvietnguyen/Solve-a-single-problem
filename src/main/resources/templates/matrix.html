@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+	<section id="wrapper">
+		<h1>Input</h1>
+		<form action="#" th:action="@{/matrix}" th:object="${matrix}" method="get">
+				<table>
+					<tr>
+						<td><label>Matrix side length:</label></td>
+						<td><input type="number" min="5" th:field="*{n}"/></td>
+					</tr>
+					<tr>
+						<td><label>Enter the string to search:</label></td>
+						<td><input type="text" th:field="*{key}" pattern=".{2,}" required title="2 characters minimum"/></td>
+					</tr>
+					<tr>
+						<td></td><td><input type="submit" value="Process"/></td>
+					</tr>
+					<tr>
+						<td></td><td><h4><a th:href="@{/search}">See the Result</a></h4></td>
+					</tr>
+				</table>
+		</form>
+		<img alt="Thor" src="/Thor1.jpg" style="width:95%"/>
+	</section>
+</body>
+</html>
